@@ -1,0 +1,26 @@
+<table class="table table-striped ">
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Shares</th>
+      <th>Value</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="stock in vm.stocks.stocks"  ng-click="vm.detailView(stock._id)">
+      <td>{{stock._id}} </td>
+      <td>{{stock.amount}}</td>
+      <td>{{stock.price*stock.amount|currency}}</td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      
+      <td><strong>Total Balance</strong></td>
+      <td>{{vm.balance | currency}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,31 @@
+
+<div id="find">
+  <div id="text">
+    <h1>Find Stocks</h1>
+    <input type="text" class="form-control" ng-change="vm.findAll()" id="symbol" placeholder="Enter Symbol, Sector, or Company" ng-model="vm.search">
+  </div>
+ 
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">Symbol</th>
+          <th scope="col">Companies</th>
+          <th scope="col">Sector</th>
+          <th scope="col">Last Sale</th>
+        </tr>
+      </thead>
+      <tbody> 
+    
+        <tr class="findRow" dir-paginate= "stock in vm.stocks | filter: vm.search | itemsPerPage: 25" [total-items="6800"] ng-click="vm.detailView(stock._id)" ng-if="vm.search != ''">
+          <td>{{ stock._id }} </td>
+          <td>{{ stock.name }}</td>
+          <td>{{ stock.sector }}</td>
+          <td>{{ stock.lastSale | currency}}</td>
+         
+        </tr>
+      </tbody>
+    </table> 
+   <dir-pagination-controls></dir-pagination-controls>
+  </div>
+</div>

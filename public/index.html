@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="cdfinance">
+<head>
+  <title>CareerDevs Finance</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/custom.css" rel="stylesheet"/>
+</head>
+<body id="page-margin">
+  
+  <mh-navigation></mh-navigation>
+  <div class="container">
+    <p class= "text-muted text-center">
+      <img class='text-center' src="/images/Logo.png" height="150" alt="CareerDevs Finance"/>
+    </p>
+    <div ng-view></div>
+  </div>
+
+  <footer class="footer">
+          &copy; 2018 Gator Gibbon Investment Group
+  </footer>
+
+  <script src="jquery/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
+  <script src="angular-app/app.js"></script>
+  <script src="angular-app/navigation-directive/navigation-directive.js"></script>
+  <script src="angular-app/mainpage/main-page-controller.js"></script>
+  <script type="text/javascript" src="../node_modules/angular-utils-pagination/dirPagination.js"></script>
+  <!--<script src="angular-app/stock-list/stock-list-controller.js"></script>-->
+  <script src="angular-app/login/login-controller.js"></script>
+  <script src="angular-app/auth/auth-factory.js"></script>
+  <script src="angular-app/auth/auth-interceptor.js"></script>
+  <script src="angular-app/register/register-controller.js"></script>
+  <script src="angular-app/dashboard/dashboard-controller.js"></script>
+  <script src="angular-app/detail/detail-controller.js"></script>
+  <script src="angular-app/buy/buy-controller.js"></script>
+  <script src="angular-app/find/find-controller.js"></script>
+  <script src="angular-app/deposit/deposit-controller.js"></script>
+</body>
+</html>
